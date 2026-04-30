@@ -1,0 +1,18 @@
+services:
+  ecotron-whisper:
+    build: .
+    container_name: ecotron-whisper
+    restart: unless-stopped
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.ecotron-whisper.rule=Host(`whisper.ecotron.co.in`)"
+      - "traefik.http.routers.ecotron-whisper.entrypoints=websecure"
+      - "traefik.http.routers.ecotron-whisper.tls.certresolver=myresolver"
+      - "traefik.http.services.ecotron-whisper.loadbalancer.server.port=3000"
+
+networks:
+  traefik:
+    external: true
