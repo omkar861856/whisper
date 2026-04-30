@@ -27,95 +27,100 @@
     </script>
 </head>
 <body>
-    <!-- Top Horizontal Banner (Width > Height) -->
-    <div class="ad-top">
+    <!-- TOP HORIZONTAL AD -->
+    <div class="ad-top-wrapper">
         <script type="text/javascript">
             atOptions = { 'key' : 'b11fc36ee451d3345350a55dd9a6110e', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
         </script>
         <script type="text/javascript" src="//www.highperformanceformat.com/b11fc36ee451d3345350a55dd9a6110e/invoke.js"></script>
     </div>
 
-    <div class="page-wrapper">
-        <!-- Left Vertical Skyscraper (Height > Width) -->
-        <div class="ad-side">
-            <script type="text/javascript">
-                atOptions = { 'key' : '4f81eb9620e5f71d8dbe60dc30bf91d4', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/4f81eb9620e5f71d8dbe60dc30bf91d4/invoke.js"></script>
-        </div>
+    <div class="site-layout">
+        <!-- LEFT VERTICAL AD -->
+        <aside class="ad-sidebar left">
+            <div class="ad-unit">
+                <script type="text/javascript">
+                    atOptions = { 'key' : '4f81eb9620e5f71d8dbe60dc30bf91d4', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/4f81eb9620e5f71d8dbe60dc30bf91d4/invoke.js"></script>
+            </div>
+        </aside>
 
-        <div class="main-container">
-            <header>
-                <h1>Ecotron Whisper</h1>
-                <p>Secure, temporary, and private. Read once, gone forever.</p>
-            </header>
+        <!-- MAIN TOOL SECTION (70% Width) -->
+        <main class="tool-center-stage">
+            <div class="main-container">
+                <header>
+                    <h1>Ecotron Whisper</h1>
+                    <p>Secure, temporary, and private. Read once, gone forever.</p>
+                </header>
 
-            <main>
-                <div id="create-view" class="view">
-                    <textarea id="note-input" placeholder="Write your secret note here..." class="premium-textarea"></textarea>
-                    <button onclick="createNote()" class="action-btn">Create Whisper Link</button>
-                </div>
+                <div class="tool-content">
+                    <div id="create-view" class="view">
+                        <textarea id="note-input" placeholder="Write your secret note here..." class="premium-textarea"></textarea>
+                        <button onclick="createNote()" class="action-btn">Create Whisper Link</button>
+                    </div>
 
-                <div id="success-view" class="view hidden">
-                    <div class="success-box">
-                        <p>Your link is ready. It will self-destruct after it's been read.</p>
-                        <div class="link-group">
-                            <input type="text" id="share-link" readonly class="premium-input">
-                            <button onclick="copyLink()" class="copy-btn">Copy</button>
+                    <div id="success-view" class="view hidden">
+                        <div class="success-box">
+                            <p>Your link is ready. It will self-destruct after it's been read.</p>
+                            <div class="link-group">
+                                <input type="text" id="share-link" readonly class="premium-input">
+                                <button onclick="copyLink()" class="copy-btn">Copy</button>
+                            </div>
                         </div>
+                        <button onclick="resetUI()" class="secondary-btn">Create Another</button>
                     </div>
-                    <button onclick="resetUI()" class="secondary-btn">Create Another</button>
-                </div>
 
-                <div id="read-view" class="view hidden">
-                    <div class="warning">⚠️ This note will self-destruct immediately after you close this page.</div>
-                    <div id="note-content" class="note-display"></div>
-                </div>
-
-                <div id="error-view" class="view hidden">
-                    <div class="error-msg">
-                        <h2>Gone.</h2>
-                        <p>This note has either already been destroyed or never existed.</p>
+                    <div id="read-view" class="view hidden">
+                        <div class="warning">⚠️ This note will self-destruct immediately after you close this page.</div>
+                        <div id="note-content" class="note-display"></div>
                     </div>
-                    <button onclick="location.href='/'" class="action-btn">Go Back</button>
+
+                    <div id="error-view" class="view hidden">
+                        <div class="error-msg">
+                            <h2>Gone.</h2>
+                            <p>This note has either already been destroyed or never existed.</p>
+                        </div>
+                        <button onclick="location.href='/'" class="action-btn">Go Back</button>
+                    </div>
                 </div>
 
-                <article style="text-align: left; margin-top: 3rem; color: #94a3b8; font-size: 0.9rem; line-height: 1.6;">
-                    <h3 style="color: var(--text); margin-bottom: 1rem;">Why Secure Notes?</h3>
-                    <p>Ecotron Whisper creates a one-time link that vanishes permanently after the first person reads it.</p>
+                <article class="seo-about">
+                    <h3>Why Secure Notes?</h3>
+                    <p>Ecotron Whisper creates a one-time link that vanishes permanently after the first person reads it. No data is stored longer than necessary.</p>
                 </article>
-            </main>
 
-            <footer>
-                <div style="margin: 2rem 0; padding-top: 1rem; border-top: 1px solid var(--border);">
-                    <p style="margin-bottom: 10px; font-weight: 600;">Try our other tools:</p>
-                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; font-size: 0.8rem;">
-                        <a href="https://time.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Time</a>
-                        <a href="https://opti.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Opti</a>
-                        <a href="https://lexi.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Lexi</a>
-                        <a href="https://sleep.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Sleep</a>
-                        <a href="https://spin.ecotron.co.in" style="color: var(--primary); text-decoration: none;">Spin</a>
-                    </div>
+                <div class="related-tools">
+                    <p>Try our other tools:</p>
+                    <nav>
+                        <a href="https://time.ecotron.co.in">Time</a>
+                        <a href="https://opti.ecotron.co.in">Opti</a>
+                        <a href="https://lexi.ecotron.co.in">Lexi</a>
+                        <a href="https://sleep.ecotron.co.in">Sleep</a>
+                        <a href="https://spin.ecotron.co.in">Spin</a>
+                    </nav>
                 </div>
-                <p>&copy; 2026 Ecotron Infrastructure</p>
-            </footer>
-        </div>
+                <div class="copyright">&copy; 2026 Ecotron Infrastructure</div>
+            </div>
+        </main>
 
-        <!-- Right Vertical Skyscraper (Height > Width) -->
-        <div class="ad-side">
-            <script type="text/javascript">
-                atOptions = { 'key' : 'a3e54b4268e5b5e34a803898537cc9a9', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/a3e54b4268e5b5e34a803898537cc9a9/invoke.js"></script>
-        </div>
+        <!-- RIGHT VERTICAL AD -->
+        <aside class="ad-sidebar right">
+            <div class="ad-unit">
+                <script type="text/javascript">
+                    atOptions = { 'key' : 'a3e54b4268e5b5e34a803898537cc9a9', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/a3e54b4268e5b5e34a803898537cc9a9/invoke.js"></script>
+            </div>
+        </aside>
     </div>
 
-    <!-- Bottom Horizontal Banners (Width > Height) -->
-    <div class="ad-bottom" style="flex-direction: column; gap: 20px;">
+    <!-- BOTTOM HORIZONTAL ADS -->
+    <div class="ad-bottom-wrapper">
         <script async="async" data-cfasync="false" src="https://developdomicile.com/4d8df9517cd0cbf991736d76cb686dc6/invoke.js"></script>
         <div id="container-4d8df9517cd0cbf991736d76cb686dc6"></div>
 
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <div class="extra-banners">
             <script type="text/javascript">
                 atOptions = { 'key' : '9ffbbc0506c6db3046076f6c3349df4d', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
             </script>
@@ -125,7 +130,7 @@
                 atOptions = { 'key' : '1321cdd5a88b10da502b9f2446126928', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
             </script>
             <script type="text/javascript" src="//www.highperformanceformat.com/1321cdd5a88b10da502b9f2446126928/invoke.js"></script>
-
+            
             <script type="text/javascript">
                 atOptions = { 'key' : '9c08544d896843c02b6120011a335716', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
             </script>
