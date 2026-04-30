@@ -15,15 +15,44 @@ body {
     color: var(--text);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
+}
+
+.page-wrapper {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
 }
 
 .container {
     width: 100%;
     max-width: 600px;
     text-align: center;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 32px;
+    border: 1px solid var(--border);
+    height: fit-content;
+}
+
+.side-ad {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 1000px) {
+    .page-wrapper { flex-direction: column; align-items: center; }
+    .side-ad { width: 100%; align-items: center; }
+}
+
+.top-ad {
+    margin-bottom: 20px;
 }
 
 header h1 {
